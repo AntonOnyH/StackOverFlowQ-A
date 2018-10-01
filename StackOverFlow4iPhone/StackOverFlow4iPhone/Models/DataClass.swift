@@ -9,5 +9,21 @@
 import Foundation
 import UIKit
 
-
+class Data {
+    
+    func fetchMovieData(completion: @escaping (_ movieData: TableViewInfo?, _ error: Error?) -> Void) {
+        let baseURL = URL(string: "https://api.stackexchange.com/docs/types/question")!
+        let task = URLSession.shared.dataTask(with: baseURL) {(data, response, error) in
+            guard let data = data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let movieData = try decoder.decode(TableViewInfo.self, from: data)
+                completion(movieData, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+        task.resume()
+    }
+}
 
