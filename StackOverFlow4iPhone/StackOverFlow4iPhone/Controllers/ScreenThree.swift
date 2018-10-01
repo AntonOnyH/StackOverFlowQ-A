@@ -10,6 +10,9 @@ import UIKit
 
 class ScreenThree: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
