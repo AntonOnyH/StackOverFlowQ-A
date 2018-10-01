@@ -10,13 +10,14 @@ import UIKit
 
 class ScreenTwo: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var questionsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
 
     }
-
- 
 
 }
 
@@ -32,6 +33,10 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let question = storyboard?.instantiateViewController(withIdentifier: "questions") as! ScreenThree
     }
 }
 
