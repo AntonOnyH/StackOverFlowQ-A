@@ -28,3 +28,7 @@ extension TableViewInfo {
         case isAnswered = "is_answered"
     }
 }
+
+struct ArrayOfTableViewInfo {
+    let items: [TableViewInfo]
+}
