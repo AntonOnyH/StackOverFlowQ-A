@@ -15,7 +15,9 @@ class ScreenTwo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        questionsTableView.register(UINib(nibName: "CustomCellScreenTwo", bundle: nil), forCellReuseIdentifier: "Cell")
+        questionsTableView.dataSource = self
+        questionsTableView.delegate = self
 
     }
 
@@ -32,11 +34,12 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let question = storyboard?.instantiateViewController(withIdentifier: "questions") as! ScreenThree
+        let controller = storyboard?.instantiateViewController(withIdentifier: "SCR03") as! ScreenThree
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

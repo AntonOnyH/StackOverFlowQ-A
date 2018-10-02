@@ -12,6 +12,11 @@ class ScreenThree: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var stackImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var iosSwiftLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
