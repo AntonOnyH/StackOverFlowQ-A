@@ -163,9 +163,9 @@
                         <outlet property="dateLabel" destination="MEA-NS-GAt" id="2EK-Sd-gee"/>
                         <outlet property="iosSwiftLabel" destination="Z4d-ww-yeK" id="Wf0-Ib-4Yp"/>
                         <outlet property="nameLabel" destination="RkO-m2-VRq" id="KRO-ia-czr"/>
-                        <outlet property="numberLabel" destination="ZLi-F7-IcB" id="v0L-Cl-wp9"/>
                         <outlet property="questionLabel" destination="Gkz-tU-uX4" id="eTH-Dl-v7W"/>
                         <outlet property="questionTextView" destination="9cr-XM-MjG" id="AKO-Il-rK3"/>
+                        <outlet property="reputationLabel" destination="ZLi-F7-IcB" id="v0L-Cl-wp9"/>
                         <outlet property="stackImage" destination="PrP-SN-mNQ" id="rJj-km-LBu"/>
                     </connections>
                 </viewController>

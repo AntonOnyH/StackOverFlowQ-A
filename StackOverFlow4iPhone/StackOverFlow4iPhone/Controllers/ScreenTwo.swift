@@ -32,10 +32,7 @@ class ScreenTwo: UIViewController {
         questionsTableView.delegate = self
         searchBar.delegate = self
 
-        fetcher.fetch { (questions, error) in
-            guard let questions = questions else {return}
-            self.items = questions.items
-        }
+       
 
     }
 
@@ -58,6 +55,7 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "SCR03") as! ScreenThree
+        controller.screenThreeDetails = items[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -65,6 +63,20 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
 extension ScreenTwo: UISearchBarDelegate{
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         emptyStateLabel.isHidden = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        fetcher.fetch(query: searchBar.text ?? "") { (questions, error) in
+            guard let questions = questions else {return}
+            self.items = questions.items
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            items = []
+        }
     }
 }
 

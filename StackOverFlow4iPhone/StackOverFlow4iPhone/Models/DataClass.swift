@@ -11,8 +11,9 @@ import UIKit
 
 class DataFetcher {
     
-    func fetch(completion: @escaping (_ questions: Questions?, _ error: Error?)-> Void){
-        let baseURL = URL(string: "http://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=swift&site=stackoverflow&filter=withbody")!
+    func fetch(query: String, completion: @escaping (_ questions: Questions?, _ error: Error?)-> Void) {
+        
+        let baseURL = URL(string: "http://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=\(query)&site=stackoverflow&filter=withbody")!
          URLSession.shared.dataTask(with: baseURL) { (data, response, error) in
             guard let data = data else {
                 return

@@ -11,49 +11,34 @@ import UIKit
 
 struct Question: Decodable{
     var title: String
-//    var userName: String
     var score: Int
     var answer_count: Int
     var view_count: Int
     var link: String
+    var body: String
+    var creation_date: Int
+    var is_answered: Bool
+    var owner: Owner
+//    var tags: ["key" : Tag]
+}
+
+struct Owner: Decodable {
+    var reputation: Int?
+    var display_name: String
+
 }
 
 struct Questions: Decodable {
     let items: [Question]
 }
 
-struct QuestionsDetails {
+struct QuestionDetails {
     var title: String
-    var body: String
-    var questionId: Int
-    var creationDate: Int
-    var displayName: String
-    var score: Int
-    var answersCount: Int
-    var viewCount: Int
-    var isAnswered: Bool
-    var tags: [Tag]
+  
 }
 
-struct Tag {
-    var tagOne: String
-    var tagTwo: String?
-    var tagThree: String?
-    var tagFour: String?
-    var tagFive: String?
+struct Tag: Decodable {
+    var tag: String
 }
 
-extension QuestionsDetails {
-    enum codingKeys: String, CodingKey {
-        case title = "title"
-        case body = "body"
-        case questionId = "question_id"
-        case creationDate = "creation_date"
-        case displayName = "display_name"
-        case score = "score"
-        case answersCount = "answers_count"
-        case viewCount = "view_count"
-        case isAnswered = "is_answered"
-        case tags = "tags"
-    }
-}
+

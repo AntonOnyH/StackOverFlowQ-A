@@ -15,7 +15,6 @@ class CustomCellScreenTwo: UITableViewCell {
     @IBOutlet weak var answersLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
     
-    let questionsDetails = QuestionsDetails(title: "What's this", body: "And the rest", questionId: 55, creationDate: 12032010, displayName: "Mr SoandSo", score: 77, answersCount: 2, viewCount: 312, isAnswered: true, tags: [Tag(tagOne: "swift", tagTwo: "ios", tagThree: "", tagFour: "", tagFive: "")])
 
     
     func fillCell(question: Question){
