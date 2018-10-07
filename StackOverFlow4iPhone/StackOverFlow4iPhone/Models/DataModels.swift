@@ -23,6 +23,7 @@ struct Question: Decodable{
 }
 
 struct Owner: Decodable {
+    var profile_image: String?
     var reputation: Int?
     var display_name: String
 

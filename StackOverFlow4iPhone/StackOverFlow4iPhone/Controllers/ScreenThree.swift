@@ -28,7 +28,8 @@ class ScreenThree: UIViewController {
         let rep: Int = screenThreeDetails?.owner.reputation ?? 0
         reputationLabel.text = "\(rep)"
         dateLabel.text = convertDate(datenumber: screenThreeDetails?.creation_date)
-//        iosSwiftLabel.text = screenThreeDetails.tags
+        stackImage.downloaded(from: screenThreeDetails?.owner.profile_image ?? "")
+        iosSwiftLabel.text = "Tags"
         
         navigationController?.navigationBar.tintColor = .white
 
@@ -39,6 +40,8 @@ class ScreenThree: UIViewController {
         let date = Date(timeIntervalSince1970: TimeInterval(d))
         return "\(date)"
     }
+    
+    
     }
 
 extension String {
@@ -49,6 +52,27 @@ extension String {
         } catch {
             return NSAttributedString()
         }
+    }
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
     }
 }
     

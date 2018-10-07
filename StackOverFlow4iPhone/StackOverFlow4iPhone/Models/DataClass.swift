@@ -12,9 +12,9 @@ import UIKit
 class DataFetcher {
     
     func fetch(query: String, completion: @escaping (_ questions: Questions?, _ error: Error?)-> Void) {
-        
-        let baseURL = URL(string: "http://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=\(query)&site=stackoverflow&filter=withbody")!
-         URLSession.shared.dataTask(with: baseURL) { (data, response, error) in
+        let formatQueryString = createEncodedString(with: query)
+        let baseURL = URL(string: "http://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=\(formatQueryString)&site=stackoverflow&filter=withbody")!
+        URLSession.shared.dataTask(with: baseURL) { (data, response, error) in
             guard let data = data else {
                 return
             }
@@ -25,7 +25,11 @@ class DataFetcher {
             } catch {
                 completion(nil, error)
             }
-        }.resume()
+            }.resume()
+    }
+    
+    private func createEncodedString(with text: String) -> String {
+        return text.replacingOccurrences(of: " ", with: ";")
     }
 }
 
