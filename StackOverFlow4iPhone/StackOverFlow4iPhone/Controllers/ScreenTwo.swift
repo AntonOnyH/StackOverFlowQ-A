@@ -14,7 +14,16 @@ class ScreenTwo: UIViewController {
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var emptyStateLabel: UILabel!
     let fetcher = DataFetcher()
-    let featcher2 = Fetcher()
+    
+    var items: [Question] = []{
+        didSet {
+            DispatchQueue.main.async {
+            self.questionsTableView.reloadData()
+            }
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +31,10 @@ class ScreenTwo: UIViewController {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         searchBar.delegate = self
-        
-//        featcher2.fetchAnswers(for: "Swift") { (ques, err) in
-//            print(ques)
-//        }
-        
+
         fetcher.fetch { (questions, error) in
             guard let questions = questions else {return}
-
+            self.items = questions.items
         }
 
     }
@@ -38,12 +43,12 @@ class ScreenTwo: UIViewController {
 
 extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCellScreenTwo
-        cell.fillCell()
+        cell.fillCell(question: items[indexPath.row])
         return cell
     }
     
