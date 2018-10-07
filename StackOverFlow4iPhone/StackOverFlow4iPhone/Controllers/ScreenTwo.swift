@@ -12,12 +12,14 @@ class ScreenTwo: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var questionsTableView: UITableView!
+    @IBOutlet weak var emptyStateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         questionsTableView.register(UINib(nibName: "CustomCellScreenTwo", bundle: nil), forCellReuseIdentifier: "Cell")
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
+        searchBar.delegate = self
 
     }
 
@@ -30,6 +32,7 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCellScreenTwo
+        cell.fillCell()
         return cell
     }
     
@@ -40,6 +43,12 @@ extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "SCR03") as! ScreenThree
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension ScreenTwo: UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        emptyStateLabel.isHidden = true
     }
 }
 

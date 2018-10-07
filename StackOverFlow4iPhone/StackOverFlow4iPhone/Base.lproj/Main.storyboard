@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pD7-gf-DnS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thv-fG-pOh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,46 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Screen One-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="SCR01" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ScreenOne" customModule="StackOverFlow4iPhone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7e-Ew-Kbd">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <color key="backgroundColor" red="0.25098039215686274" green="0.47058823529411764" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.47058823529999999" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Overflow Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQs-da-Qcs">
-                                <rect key="frame" x="100" y="323" width="175" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="J7e-Ew-Kbd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DW7-uv-a5f"/>
-                            <constraint firstItem="TQs-da-Qcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8m-ok-gMb"/>
-                            <constraint firstItem="J7e-Ew-Kbd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lhe-FB-Vng"/>
-                            <constraint firstItem="J7e-Ew-Kbd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="nUe-ng-hPc"/>
-                            <constraint firstItem="TQs-da-Qcs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="unv-Kd-LjO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="krA-aS-1Ml"/>
-                    <connections>
-                        <outlet property="searchBar" destination="J7e-Ew-Kbd" id="853-g0-HFE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1306.4000000000001" y="83.208395802098963"/>
-        </scene>
         <!--Screen Two-->
         <scene sceneID="BHw-Li-Tja">
             <objects>
@@ -59,36 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rjv-dn-14E">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.47058823529411764" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.25098039215686274" green="0.47058823529411764" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Overflow Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsR-EJ-REh">
+                                <rect key="frame" x="89" y="321.5" width="197.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-cQ-iGe">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oTK-OS-PeX" firstAttribute="bottom" secondItem="VQb-cQ-iGe" secondAttribute="bottom" id="5VZ-QJ-ad2"/>
+                            <constraint firstItem="hsR-EJ-REh" firstAttribute="centerX" secondItem="5Vj-Kk-ca6" secondAttribute="centerX" id="5zK-sD-Wwe"/>
                             <constraint firstItem="rjv-dn-14E" firstAttribute="leading" secondItem="oTK-OS-PeX" secondAttribute="leading" id="BQ2-jd-sdE"/>
                             <constraint firstItem="rjv-dn-14E" firstAttribute="top" secondItem="oTK-OS-PeX" secondAttribute="top" id="EpK-n7-cxm"/>
                             <constraint firstItem="rjv-dn-14E" firstAttribute="trailing" secondItem="oTK-OS-PeX" secondAttribute="trailing" id="RKa-jQ-Lz7"/>
+                            <constraint firstItem="hsR-EJ-REh" firstAttribute="centerY" secondItem="5Vj-Kk-ca6" secondAttribute="centerY" id="X6K-Ct-dUr"/>
                             <constraint firstItem="VQb-cQ-iGe" firstAttribute="top" secondItem="rjv-dn-14E" secondAttribute="bottom" id="jgY-sn-xgN"/>
                             <constraint firstItem="oTK-OS-PeX" firstAttribute="trailing" secondItem="VQb-cQ-iGe" secondAttribute="trailing" id="owN-ar-3eG"/>
                             <constraint firstItem="VQb-cQ-iGe" firstAttribute="leading" secondItem="oTK-OS-PeX" secondAttribute="leading" id="v9L-mn-3L5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTK-OS-PeX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lZc-Nh-5Fe"/>
                     <connections>
+                        <outlet property="emptyStateLabel" destination="hsR-EJ-REh" id="pOE-Vu-ufA"/>
                         <outlet property="questionsTableView" destination="VQb-cQ-iGe" id="yQm-DM-LoY"/>
                         <outlet property="searchBar" destination="rjv-dn-14E" id="vuC-DD-O7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QzS-6b-xLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8" y="84.107946026986511"/>
+            <point key="canvasLocation" x="3840.8000000000002" y="96.7016491754123"/>
         </scene>
         <!--Screen Three-->
         <scene sceneID="52U-81-QnU">
@@ -201,25 +171,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbd-Nv-pWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639.1999999999998" y="83.208395802098963"/>
+            <point key="canvasLocation" x="4528.8000000000002" y="96.7016491754123"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="kcA-On-QB0">
+        <scene sceneID="wx7-Pp-TUY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6MY-ge-HpT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thv-fG-pOh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vkw-Wy-2Hw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ios-G9-Wzs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4oG-jX-mng"/>
+                        <segue destination="o81-3K-cni" kind="relationship" relationship="rootViewController" id="PGe-dA-ksY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujn-GV-FAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rus-QJ-7vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="-632"/>
+            <point key="canvasLocation" x="2901.5999999999999" y="96.7016491754123"/>
         </scene>
     </scenes>
 </document>
