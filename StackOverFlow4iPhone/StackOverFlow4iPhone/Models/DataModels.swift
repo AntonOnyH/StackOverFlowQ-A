@@ -9,6 +9,37 @@
 import Foundation
 import UIKit
 
+struct Question: Decodable{
+    var title: String
+//    var userName: String
+    var score: Int
+    var answer_count: Int?
+    var view_count: Int?
+    var link: String?
+}
+
+//extension Question {
+//    enum codingkeys: String, CodingKey {
+//        case title = "title"
+////        case userName
+//        case votes = "score"
+//        case answers = "answer_count"
+//        case viewCount = "view_count"
+//        case detailURL = "link"
+//    }
+
+//}
+
+struct Questions: Decodable {
+    let items: [Question]
+}
+
+//extension Questions {
+//    enum CodingKeys: String, CodingKey {
+//        case item = "items"
+//    }
+//}
+
 struct QuestionsDetails {
     var title: String
     var body: String

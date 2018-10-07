@@ -13,6 +13,8 @@ class ScreenTwo: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var emptyStateLabel: UILabel!
+    let fetcher = DataFetcher()
+    let featcher2 = Fetcher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,15 @@ class ScreenTwo: UIViewController {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         searchBar.delegate = self
+        
+//        featcher2.fetchAnswers(for: "Swift") { (ques, err) in
+//            print(ques)
+//        }
+        
+        fetcher.fetch { (questions, error) in
+            guard let questions = questions else {return}
+
+        }
 
     }
 
