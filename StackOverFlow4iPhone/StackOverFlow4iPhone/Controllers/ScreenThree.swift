@@ -29,6 +29,9 @@ class ScreenThree: UIViewController {
         reputationLabel.text = "\(rep)"
         dateLabel.text = convertDate(datenumber: screenThreeDetails?.creation_date)
 //        iosSwiftLabel.text = screenThreeDetails.tags
+        
+        navigationController?.navigationBar.tintColor = .white
+
     }
 
     func convertDate(datenumber: Int?) -> String {

@@ -31,6 +31,8 @@ class ScreenTwo: UIViewController {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         searchBar.delegate = self
+        
+        navigationItem.titleView = searchBar
 
        
 

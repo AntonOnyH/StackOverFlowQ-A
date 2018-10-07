@@ -18,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rjv-dn-14E">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjv-dn-14E">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.47058823529411764" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.25098039215686274" green="0.47058823529411764" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-cQ-iGe">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -39,17 +40,16 @@
                         <constraints>
                             <constraint firstItem="oTK-OS-PeX" firstAttribute="bottom" secondItem="VQb-cQ-iGe" secondAttribute="bottom" id="5VZ-QJ-ad2"/>
                             <constraint firstItem="hsR-EJ-REh" firstAttribute="centerX" secondItem="5Vj-Kk-ca6" secondAttribute="centerX" id="5zK-sD-Wwe"/>
-                            <constraint firstItem="rjv-dn-14E" firstAttribute="leading" secondItem="oTK-OS-PeX" secondAttribute="leading" id="BQ2-jd-sdE"/>
-                            <constraint firstItem="rjv-dn-14E" firstAttribute="top" secondItem="oTK-OS-PeX" secondAttribute="top" id="EpK-n7-cxm"/>
-                            <constraint firstItem="rjv-dn-14E" firstAttribute="trailing" secondItem="oTK-OS-PeX" secondAttribute="trailing" id="RKa-jQ-Lz7"/>
+                            <constraint firstItem="VQb-cQ-iGe" firstAttribute="top" secondItem="oTK-OS-PeX" secondAttribute="top" id="SDQ-ac-Kse"/>
                             <constraint firstItem="hsR-EJ-REh" firstAttribute="centerY" secondItem="5Vj-Kk-ca6" secondAttribute="centerY" id="X6K-Ct-dUr"/>
-                            <constraint firstItem="VQb-cQ-iGe" firstAttribute="top" secondItem="rjv-dn-14E" secondAttribute="bottom" id="jgY-sn-xgN"/>
                             <constraint firstItem="oTK-OS-PeX" firstAttribute="trailing" secondItem="VQb-cQ-iGe" secondAttribute="trailing" id="owN-ar-3eG"/>
                             <constraint firstItem="VQb-cQ-iGe" firstAttribute="leading" secondItem="oTK-OS-PeX" secondAttribute="leading" id="v9L-mn-3L5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTK-OS-PeX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lZc-Nh-5Fe"/>
+                    <navigationItem key="navigationItem" id="lZc-Nh-5Fe">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emptyStateLabel" destination="hsR-EJ-REh" id="pOE-Vu-ufA"/>
                         <outlet property="questionsTableView" destination="VQb-cQ-iGe" id="yQm-DM-LoY"/>
