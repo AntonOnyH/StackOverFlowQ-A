@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCellScreenTwo: UITableViewCell {
+class CustomCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var votesLabel: UILabel!
@@ -24,6 +24,4 @@ class CustomCellScreenTwo: UITableViewCell {
         answersLabel.text = "\(question.answer_count) answers"
         viewsLabel.text = "\(question.view_count) views"
     }
-   
-    
 }
