@@ -9,7 +9,7 @@
 import UIKit
 
 class ScreenTwo: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var emptyStateLabel: UILabel!
@@ -18,12 +18,10 @@ class ScreenTwo: UIViewController {
     var items: [Question] = []{
         didSet {
             DispatchQueue.main.async {
-            self.questionsTableView.reloadData()
+                self.questionsTableView.reloadData()
             }
         }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +29,9 @@ class ScreenTwo: UIViewController {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         searchBar.delegate = self
-        
         navigationItem.titleView = searchBar
-
-       
-
     }
-
+    
 }
 
 extension ScreenTwo: UITableViewDelegate, UITableViewDataSource {

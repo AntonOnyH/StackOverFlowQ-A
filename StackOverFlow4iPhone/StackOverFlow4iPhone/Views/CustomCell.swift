@@ -14,14 +14,20 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var answersLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
+    @IBOutlet weak var checkMark: UIImageView!
     
 
     
     func fillCell(question: Question){
         questionLabel.text = question.title
         askedByLabel.text = question.owner.display_name
-        votesLabel.text = "\(question.score) Views"
+        votesLabel.text = "\(question.score) Votes"
         answersLabel.text = "\(question.answer_count) answers"
         viewsLabel.text = "\(question.view_count) views"
+        var answer: Bool = question.is_answered
+        checkMark.isHidden = true
+        if answer == true {
+            checkMark.isHidden = false
+        }
     }
 }

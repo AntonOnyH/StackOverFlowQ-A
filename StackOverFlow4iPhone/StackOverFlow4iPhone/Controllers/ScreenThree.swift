@@ -9,7 +9,7 @@
 import UIKit
 
 class ScreenThree: UIViewController {
-
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var stackImage: UIImageView!
@@ -19,7 +19,7 @@ class ScreenThree: UIViewController {
     @IBOutlet weak var iosSwiftLabel: UILabel!
     
     var screenThreeDetails: Question?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = screenThreeDetails?.title
@@ -32,9 +32,9 @@ class ScreenThree: UIViewController {
         iosSwiftLabel.text = "Tags"
         navigationItem.title = "Question"
         navigationController?.navigationBar.tintColor = .white
-
+        
     }
-
+    
     func convertDate(datenumber: Int?) -> String {
         guard let d = datenumber else {return ""}
         let date = Date(timeIntervalSince1970: TimeInterval(d))
@@ -42,7 +42,7 @@ class ScreenThree: UIViewController {
     }
     
     
-    }
+}
 
 extension String {
     var htmlToAttributedString: NSAttributedString? {
@@ -75,6 +75,6 @@ extension UIImageView {
         downloaded(from: url, contentMode: mode)
     }
 }
-    
+
 
 
