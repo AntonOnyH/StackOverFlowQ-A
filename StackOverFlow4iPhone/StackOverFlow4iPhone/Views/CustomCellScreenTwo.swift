@@ -19,7 +19,7 @@ class CustomCellScreenTwo: UITableViewCell {
     
     func fillCell(question: Question){
         questionLabel.text = question.title
-        askedByLabel.text = "asked by FIX ME)"
+        askedByLabel.text = question.owner.display_name
         votesLabel.text = "\(question.score) Views"
         answersLabel.text = "\(question.answer_count) answers"
         viewsLabel.text = "\(question.view_count) views"
