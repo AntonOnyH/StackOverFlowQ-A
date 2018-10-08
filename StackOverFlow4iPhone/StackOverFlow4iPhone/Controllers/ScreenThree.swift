@@ -30,7 +30,7 @@ class ScreenThree: UIViewController {
         dateLabel.text = convertDate(datenumber: screenThreeDetails?.creation_date)
         stackImage.downloaded(from: screenThreeDetails?.owner.profile_image ?? "")
         iosSwiftLabel.text = "Tags"
-        
+        navigationItem.title = "Question"
         navigationController?.navigationBar.tintColor = .white
 
     }
