@@ -13,7 +13,7 @@
 		7702C33E21626FD300EF7E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7702C33C21626FD300EF7E3E /* LaunchScreen.storyboard */; };
 		7702C34B2162767800EF7E3E /* ScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C34A2162767800EF7E3E /* ScreenTwo.swift */; };
 		7702C34D2162769200EF7E3E /* ScreenThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C34C2162769200EF7E3E /* ScreenThree.swift */; };
-		7702C352216277DA00EF7E3E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C350216277DA00EF7E3E /* CustomCell.swift */; };
+		7702C352216277DA00EF7E3E /* CustomCellScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C350216277DA00EF7E3E /* CustomCellScreenTwo.swift */; };
 		7702C353216277DA00EF7E3E /* CustomCellScreenTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7702C351216277DA00EF7E3E /* CustomCellScreenTwo.xib */; };
 		7702C3552162846D00EF7E3E /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C3542162846D00EF7E3E /* DataModels.swift */; };
 		7702C3572162849700EF7E3E /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702C3562162849700EF7E3E /* DataClass.swift */; };
@@ -28,7 +28,7 @@
 		7702C33F21626FD300EF7E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7702C34A2162767800EF7E3E /* ScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTwo.swift; sourceTree = "<group>"; };
 		7702C34C2162769200EF7E3E /* ScreenThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThree.swift; sourceTree = "<group>"; };
-		7702C350216277DA00EF7E3E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		7702C350216277DA00EF7E3E /* CustomCellScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellScreenTwo.swift; sourceTree = "<group>"; };
 		7702C351216277DA00EF7E3E /* CustomCellScreenTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellScreenTwo.xib; sourceTree = "<group>"; };
 		7702C3542162846D00EF7E3E /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		7702C3562162849700EF7E3E /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		7702C345216270A700EF7E3E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7702C350216277DA00EF7E3E /* CustomCell.swift */,
+				7702C350216277DA00EF7E3E /* CustomCellScreenTwo.swift */,
 				7702C351216277DA00EF7E3E /* CustomCellScreenTwo.xib */,
 			);
 			path = Views;
@@ -176,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7702C3552162846D00EF7E3E /* DataModels.swift in Sources */,
-				7702C352216277DA00EF7E3E /* CustomCell.swift in Sources */,
+				7702C352216277DA00EF7E3E /* CustomCellScreenTwo.swift in Sources */,
 				7702C33421626FCD00EF7E3E /* AppDelegate.swift in Sources */,
 				7702C34D2162769200EF7E3E /* ScreenThree.swift in Sources */,
 				7702C34B2162767800EF7E3E /* ScreenTwo.swift in Sources */,
